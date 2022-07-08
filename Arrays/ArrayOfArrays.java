@@ -2,6 +2,7 @@ public class ArrayOfArrays {
     public static void main(String[] args) {
         //int[][] aMatrix = new int[4][];
         int[][] aMatrix = new int[4][5];
+        int[][] bMatrix = new int[4][5];
 
         //populate matrix
         for (int i = 0; i < aMatrix.length; i++) {
