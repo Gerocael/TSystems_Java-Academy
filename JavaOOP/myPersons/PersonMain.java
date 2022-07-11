@@ -56,5 +56,11 @@ public class PersonMain {
         s3.setCar(c3);
         s3.getCar().start();
         System.out.println(s3);
+
+        for(Person : persons){
+            if(persons.getCar() != null){
+                start car
+            }
+        }
     }
 }
