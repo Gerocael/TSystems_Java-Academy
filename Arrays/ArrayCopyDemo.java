@@ -1,12 +1,19 @@
 package arrays;
 
+import java.util.Random;
+
 public class ArrayCopyDemo {
     private static long startTime;
     private static long endTime;
     private static int iteration = 0;
 
     public static void main(String[] args) {
-        int[] arrayToSort = {10, 5, 1, 6, 19, 11, 4, 2, 7, 8};
+        Random r = new Random();
+        int n = 5000;
+        int[] arrayToSort = new int[n];
+        for (int i = 0; i < n; i++) {
+            arrayToSort[i] = r.nextInt(100);
+        }
         int[] copyFrom = new int[11000];
         int[] copyTo = new int[11000];
         int[] copyFrom2 = new int[11000];
@@ -19,7 +26,6 @@ public class ArrayCopyDemo {
             copyFrom[i] = i + 10;
             copyTo[i] = 0;
         }
-
         recordStart();
         System.arraycopy(copyFrom, 2, copyTo, 0, 10000);
         recordAndWriteEnd();
@@ -32,11 +38,6 @@ public class ArrayCopyDemo {
         recordStart();
         arraycopy(copyFrom2, 2, copyTo2, 4, 10000);
         recordAndWriteEnd();
-
-//        for(int i : copyTo) {
-//            System.out.print(i + ",");
-//        }
-//        System.out.println();
 
         bubbleSort(arrayToSort);
         printArray(arrayToSort);
@@ -73,6 +74,7 @@ public class ArrayCopyDemo {
     private static void bubbleSort(int[] arrayToSort) {
         //zotriedit pole pomocou bubble sort
         int temp;
+        long lStartTime = System.nanoTime();
         for (int j = 0; j < arrayToSort.length; j++) {
             for (int i = 0; i < arrayToSort.length - 1; i++) {
                 if (arrayToSort[i] > arrayToSort[i + 1]) {
@@ -82,6 +84,9 @@ public class ArrayCopyDemo {
                 }
              }
         }
+        long lEndTime = System.nanoTime();
+        long output = lEndTime - lStartTime;
+        System.out.println("Elapsed time in milliseconds: " + output / 1000000);
     }
 
     private static void printArray(int[] arrayToSort) {

@@ -1,3 +1,5 @@
+import static java.util.Objects.isNull;
+
 public class Matrix {
     public static void main(String[] args) {
         //int[][] aMatrix = new int[4][];
@@ -15,6 +17,7 @@ public class Matrix {
                 {1, 2, 3, 4, 5},
                 {1, 2, 3, 4, 5}};
 
+        checkIn(aMatrix, bMatrix);
 
         int[][] addition = addMatrices(aMatrix, bMatrix);
         int[][] transposed = transpose(aMatrix);
@@ -80,5 +83,25 @@ public class Matrix {
             }
             System.out.println();
         }
+    }
+    private static boolean checkIn(int aMatrix[][], int bMatrix[][]){
+        if (aMatrix.length > 5 || bMatrix.length > 5) {
+            System.out.println("Error: Expected size 5x5!");
+            return true;
+        }
+
+        for (int i = 0; i < aMatrix.length; i++) {
+            for (int j = 0; j < aMatrix.length; j++) {
+                if (isNull(aMatrix[i][j])) {
+                    System.out.println("Error: Expected size 5x5!");
+                    return true;
+                }
+                if (isNull(bMatrix[i][j])) {
+                    System.out.println("Error: Expected size 5x5!");
+                    return true;
+                }
+            };
+        }
+        return false;
     }
 }
