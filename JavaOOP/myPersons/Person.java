@@ -1,17 +1,19 @@
 package myPersons;
 
+import cars.Car;
+
 public class Person {
-    private String name;
-    private int age;
+    public static final String JAHODA = "Jahoda";
+    private String name; // = null;
+    private int age; // = 0;
+    private Car car;
 
     public Person(String name) {
-        this(name, 0);
-        this.name = name;
+        this(name, 5);
     }
 
     public Person(String name, int age) {
         this.name = name;
-        //if not valid, set default age 0
         if(isValidAge(age)) {
             this.age = age;
         }
@@ -30,10 +32,17 @@ public class Person {
     }
 
     public void setAge(int age) {
-        //check age, don't set if not valid
         if(isValidAge(age)) {
             this.age = age;
         }
+    }
+
+    public Car getCar() {
+        return car;
+    }
+
+    public void setCar(Car car) {
+        this.car = car;
     }
 
     private boolean isValidAge(int ageNew) {
@@ -45,6 +54,7 @@ public class Person {
         return "MyPerson{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
+                (car != null ? ", car=" + car : "") +
                 '}';
     }
 }

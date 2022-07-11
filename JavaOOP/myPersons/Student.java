@@ -1,7 +1,8 @@
 package myPersons;
 
-public class Student extends Person{
+public class Student extends Person {
     private String isicNumber;
+    private String surname;
 
     public Student(String name, String isicNumber) {
         super(name);
@@ -23,7 +24,7 @@ public class Student extends Person{
 
     @Override
     public String toString() {
-        return "Student: "
+        return "STUDENT "
                 + super.toString()
                 + ", isic: " + isicNumber;
     }
