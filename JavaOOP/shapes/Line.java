@@ -10,7 +10,7 @@ public class Line extends Shape {
         this.to = to;
     }
 
-    public Line(Point from, Point to, int color) {
+    public Line(Point from, Point to, char color) {
         super(color);
         this.from = from;
         this.to = to;

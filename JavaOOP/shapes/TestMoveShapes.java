@@ -14,9 +14,6 @@ public class TestMoveShapes {
     }
 
     private static void move(Shape[] shapes, int dx, int dy) {
-        for (Shape shape : shapes) {
-            shape.move(dx, dy);
-        }
     }
 
     private static void print(Shape[] shapes) {

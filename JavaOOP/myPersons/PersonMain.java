@@ -5,11 +5,17 @@ public class PersonMain {
         Person[] persons = {
                 new Person("Janko"),
                 new Person("Peter", 20),
-                new Person("Lukáš", 30),
-                new Person("Fero", 14),
+                new Student("Fero", "752424"),
+                new Student("Lya", 24, "223463"),
+                new Employee("Dzugus", "random"),
         };
         for (Person person : persons) {
             System.out.println(person);
         }
+//        Person p1 = new Person("Jan");
+//        Person p2 = p1;
+//        p2.setName("Peter");
+//        System.out.println(p1);
+//        System.out.println(p2);
     }
 }

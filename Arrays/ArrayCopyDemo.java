@@ -1,5 +1,6 @@
 package arrays;
 
+import java.lang.reflect.Array;
 import java.util.Random;
 
 public class ArrayCopyDemo {
@@ -8,7 +9,7 @@ public class ArrayCopyDemo {
     private static int iteration = 0;
 
     public static void main(String[] args) {
-        int n = 50000;
+        int n = 500;
         Random r = new Random();
         int[] arrayToSort = new int[n];
         for (int i = 0; i < n; i++) {
