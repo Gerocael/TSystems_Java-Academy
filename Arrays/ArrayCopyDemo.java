@@ -8,8 +8,8 @@ public class ArrayCopyDemo {
     private static int iteration = 0;
 
     public static void main(String[] args) {
+        int n = 50000;
         Random r = new Random();
-        int n = 5000;
         int[] arrayToSort = new int[n];
         for (int i = 0; i < n; i++) {
             arrayToSort[i] = r.nextInt(100);
@@ -82,7 +82,7 @@ public class ArrayCopyDemo {
                     arrayToSort[i] = arrayToSort[i + 1];
                     arrayToSort[i + 1] = temp;
                 }
-             }
+            }
         }
         long lEndTime = System.nanoTime();
         long output = lEndTime - lStartTime;
