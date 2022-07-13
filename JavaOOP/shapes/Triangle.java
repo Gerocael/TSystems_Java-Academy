@@ -1,6 +1,6 @@
 package shapes;
 
-public class Triangle extends Shape{
+public class Triangle extends Shape {
 
     private final int height;
 
@@ -15,18 +15,21 @@ public class Triangle extends Shape{
 
     @Override
     public String toString() {
+        String s = "";
+
         int x = getHeight();
-        StringBuilder sb = new StringBuilder();
+
         for (int i = 0; i < x; i++) {
             for (int j = 0; j < x; j++) {
-                sb.append("/");
+                s+=" ";
             }
-            sb.append("*");
-            for (int k = 0; k < x; k++) {
-                sb.append("*");
+            s+="*";
+            for (int j = 0; j < x; j++) {
+                s+="*";
             }
-            sb.append("\n");
+            s+="\n";
         }
-        return sb.toString();
+        return s;
+
     }
 }
