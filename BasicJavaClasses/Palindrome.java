@@ -1,3 +1,5 @@
+import static java.lang.StringUTF16.toLowerCase;
+
 public class Palindrome {
 	public static void main(String[] args) {
 		String palindrome = "jarko";
@@ -7,5 +9,8 @@ public class Palindrome {
 			dest.append(palindrome.charAt(i));
 		}
 		System.out.println(dest.toString());
-	}	
+	}
+	public static boolean isPalindrome(String palindrome){
+		palindrome = toLowerCase();
+	}
 }
