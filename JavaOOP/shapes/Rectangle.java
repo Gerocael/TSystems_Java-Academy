@@ -18,10 +18,20 @@ public class Rectangle extends Shape{
     public int getHeight() {
         return height;
     }
+
     @Override
     public String toString() {
-        return "Rectangle "
-                + super.toString()
-                + ", width-height  " + width + height;
+        String s = "";
+
+        int x = getWidth();
+        int y = getHeight();
+
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < y; j++) {
+                s+= "*";
+            }
+            s+= "\n";
+        }
+        return s;
     }
 }

@@ -1,5 +1,7 @@
 package shapes;
 
+import java.sql.SQLOutput;
+
 public class Square extends Shape{
 
     private final int size;
@@ -15,8 +17,16 @@ public class Square extends Shape{
 
     @Override
     public String toString() {
-        return "Square "
-        + super.toString()
-                + ", size :" + size;
+        String s = "";
+
+        int x = getSize();
+
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < x; j++) {
+                s+= "*";
+            }
+            s+= "\n";
+        }
+        return s;
     }
 }

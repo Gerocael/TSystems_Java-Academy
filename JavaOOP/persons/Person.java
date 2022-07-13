@@ -1,34 +1,43 @@
 package persons;
 
-public class Person implements CompareObject {
-    private String firstName;
-    private String lastName;
-    
-    public Person(String firstName, String lastName){
+public class Person implements Comparable<Person> {
+    private final String firstName;
+    private final String lastName;
+    private final int age;
+
+    public Person(String firstName, String lastName, int age){
         this.firstName = firstName;
         this.lastName = lastName;
+        this.age = age;
     }
-    
+
     public String getFirstName(){
         return firstName;
     }
-    
+
     public String getLastName(){
         return lastName;
     }
-    
-    public String toString() {
-        return firstName + " " + lastName;
-    } 
-    
-    public int compareTo(CompareObject obj) {
-        if(!(obj instanceof Person))
-            return -1;
-        
-        int res = lastName.compareTo(((Person)obj).lastName);
-        if(res != 0)
-            return res;
-        
-        return firstName.compareTo(((Person)obj).firstName);
+
+    public int getAge() {
+        return age;
     }
+
+    public String toString() {
+        return firstName + " " + lastName + " " + age;
+    }
+
+    @Override
+    public int compareTo(Person p) {
+        int nameCompare = this.lastName.compareTo(p.lastName);
+        if(nameCompare == 0) {
+            int ageCompare = this.age - p.age;
+            if(ageCompare != 0) {
+                return ageCompare;
+            }
+            return this.age - p.age;
+        }
+        return nameCompare;
+    }
+
 }

@@ -15,8 +15,9 @@ public class Circle extends Shape{
 
     @Override
     public String toString() {
-        return "Circle "
-                + super.toString()
-                + ", radix  " + radix ;
+        String s = "";
+        int x = getRadix();
+
+        return s;
     }
 }

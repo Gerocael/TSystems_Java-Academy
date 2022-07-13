@@ -5,7 +5,7 @@ public class TestMoveShapes {
         Shape[] shapes = {
             new Point(2, 3),
             new Point(4, 5),
-            new Line(new Point(1, 1), new Point(3, 4))
+            new Line(5)
         };
 
         print(shapes);
