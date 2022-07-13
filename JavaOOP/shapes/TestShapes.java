@@ -9,7 +9,8 @@ public class TestShapes {
                 new Square('*', 5)
         };
 
-                        Arrays.sort(shapes);
+        Arrays.sort(shapes);
+
         Square s1 = new Square('*', 5);
         System.out.println(s1);
         Triangle s2 = new Triangle('*', 7);
