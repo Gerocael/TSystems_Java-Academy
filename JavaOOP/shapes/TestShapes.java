@@ -13,7 +13,7 @@ public class TestShapes {
 
         Square s1 = new Square('*', 5);
         System.out.println(s1);
-        Triangle s2 = new Triangle('*', 7);
+        Triangle s2 = new Triangle('*', 8);
         System.out.println(s2);
         Rectangle s3 = new Rectangle('*', 7, 10);
         System.out.println(s3);

@@ -20,22 +20,19 @@ public class Parallelogram extends Shape {
 
         @Override
         public String toString() {
-            String s = "";
-
             int x = getWidth();
             int y = getHeight();
-
-            for (int k = 0; k < y; k++) {
-                for (int i = 0; i < x; i++) {
-                    s += " ";
-                    for (int j = 0; j < y; j++) {
-                        s += "*";
-                    }
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < x; i++) {
+                for (int k = 0; k < i; k++) {
+                    sb.append(" ");
                 }
-                s += "\n";
+                for (int j = 0; j < y; j++) {
+                    sb.append("* ");
+                }
+                sb.append("\n");
             }
-
-            return s;
+            return sb.toString();
         }
 
     @Override

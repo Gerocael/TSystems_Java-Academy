@@ -19,12 +19,9 @@ public class Square extends Shape {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < x; i++) {
             for (int j = 0; j < x; j++) {
-                sb.append("*");
-                for (int k = 0; k < x; k++) {
-                    sb.append(super.color).append("*");
-                    sb.append("\n");
-                }
+                sb.append("* ");
             }
+            sb.append("\n");
         }
         return sb.toString();
     }

@@ -21,17 +21,15 @@ public class Rectangle extends Shape{
 
     @Override
     public String toString() {
-        String s = "";
-
         int x = getWidth();
         int y = getHeight();
-
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < x; i++) {
             for (int j = 0; j < y; j++) {
-                s+= "*";
+                sb.append("* ");
             }
-            s+= "\n";
+            sb.append("\n");
         }
-        return s;
+        return sb.toString();
     }
 }

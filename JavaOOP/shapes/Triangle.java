@@ -15,21 +15,18 @@ public class Triangle extends Shape {
 
     @Override
     public String toString() {
-        String s = "";
-
         int x = getHeight();
-
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < x; i++) {
             for (int j = 0; j < x; j++) {
-                s+=" ";
+                sb.append(" ");
             }
-            s+="*";
-            for (int j = 0; j < x; j++) {
-                s+="*";
+            sb.append("* ");
+            for (int j = 0; j < i; j++) {
+                sb.append("* ");
             }
-            s+="\n";
+            sb.append("\n");
         }
-        return s;
-
+        return sb.toString();
     }
 }
