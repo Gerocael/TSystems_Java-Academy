@@ -17,4 +17,14 @@ public class ListDir {
             System.err.printf("File %s is not directory", dir);
         }
     }
+
+//    private static void listDir(String path) {
+//        System.out.println(path);
+//        File dir = new File(path);
+//        if(dir.isDirectory()){
+//            for(String filename : dir.list()){
+//                System.out.println(filename + path);
+//            }
+//        }
+//    }
 }
