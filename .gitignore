@@ -3,3 +3,7 @@
 out
 bin
 *.class
+test
+*.log
+*.log.copy*
+*.bin
