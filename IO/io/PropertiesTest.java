@@ -14,13 +14,14 @@ public class PropertiesTest {
         //Load from file if the file exists
         if(file.exists()) {
             props.load(new FileInputStream(file));
-            System.out.println(props);            
+            System.out.println(props);
         }
 
         //Set properties
         props.setProperty("user", "john");
         props.setProperty("passwd", "hrasko");
 
+        System.out.println("JETU passwd " + props.getProperty("passwd"));
         System.out.println("JETU IZE " + props.getProperty("ize"));
 
         //Store properties
